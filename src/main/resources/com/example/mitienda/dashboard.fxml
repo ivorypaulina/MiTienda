@@ -3,150 +3,138 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<BorderPane xmlns="http://javafx.com/javafx/21"
-            xmlns:fx="http://javafx.com/fxml/1"
-            fx:controller="com.example.mitienda.DashboardController">
+<BorderPane xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.mitienda.DashboardController">
+
+    <!-- MENU LATERAL -->
 
     <left>
-        <VBox spacing="10"
-              prefWidth="220"
-              styleClass="menu">
 
-            <Label text="MITIENDA"/>
+        <VBox prefWidth="230" styleClass="menu">
 
-            <Button text="🏠 Inicio"/>
-            <Button text="📦 Productos"/>
-            <Button text="📂 Categorías"/>
-            <Button text="👥 Clientes"/>
-            <Button text="💰 Ventas"/>
-            <Button text="📊 Reportes"/>
-            <Button text="⚙ Usuarios"/>
+            <Label styleClass="menu-title" text="MiTienda" />
 
-            <Button text="🚪 Cerrar Sesión"
-                    onAction="#cerrarSesion"/>
+            <Label styleClass="menu-subtitle" text="Sistema de Ventas" />
+
+            <Separator />
+
+            <Button styleClass="menu-active" text="🏠 Inicio" />
+
+            <Button text="📦 Productos" />
+
+            <Button text="📂 Categorías" />
+
+            <Button text="👥 Clientes" />
+
+            <Button text="💰 Ventas" />
+
+            <Button text="📊 Reportes" />
+
+            <Button text="⚙ Usuarios" />
+
+            <Pane VBox.vgrow="ALWAYS" />
+
+            <Button onAction="#cerrarSesion" text="🚪 Cerrar Sesión" />
 
         </VBox>
+
     </left>
+
+    <!-- CONTENIDO -->
 
     <center>
 
-        <VBox spacing="15"
-              style="-fx-padding:20;">
+        <VBox spacing="15" styleClass="content">
 
-            <Label text="GESTIÓN DE PRODUCTOS"
-                   style="-fx-font-size:20px;
-                          -fx-font-weight:bold;"/>
+            <Label styleClass="page-title" text="Gestión de Productos" />
 
-            <GridPane hgap="10"
-                      vgap="10">
+            <!-- FORMULARIO -->
 
-                <Label text="Código:"
-                       GridPane.rowIndex="0"
-                       GridPane.columnIndex="0"/>
+            <VBox spacing="15" styleClass="card">
 
-                <TextField fx:id="txtCodigo"
-                           promptText="Ingrese código"
-                           GridPane.rowIndex="0"
-                           GridPane.columnIndex="1"/>
+                <Label styleClass="card-title" text="Información del Producto" />
 
-                <Label text="Nombre:"
-                       GridPane.rowIndex="1"
-                       GridPane.columnIndex="0"/>
+                <GridPane hgap="15" prefHeight="99.0" prefWidth="734.0" vgap="10">
 
-                <TextField fx:id="txtNombre"
-                           promptText="Ingrese nombre"
-                           GridPane.rowIndex="1"
-                           GridPane.columnIndex="1"/>
+                    <Label styleClass="label-form" text="Código" GridPane.columnIndex="0" GridPane.rowIndex="0" />
 
-                <Label text="Categoría:"
-                       GridPane.rowIndex="2"
-                       GridPane.columnIndex="0"/>
+                    <TextField fx:id="txtCodigo" prefHeight="26.0" prefWidth="316.0" GridPane.columnIndex="1" GridPane.rowIndex="0" />
 
-                <ComboBox fx:id="cbCategoria"
-                          promptText="Seleccione"
-                          GridPane.rowIndex="2"
-                          GridPane.columnIndex="1"/>
+                    <Label prefHeight="18.0" prefWidth="45.0" styleClass="label-form" text="Nombre" GridPane.columnIndex="0" GridPane.rowIndex="1" />
 
-                <Label text="Precio:"
-                       GridPane.rowIndex="3"
-                       GridPane.columnIndex="0"/>
+                    <TextField fx:id="txtNombre" GridPane.columnIndex="1" GridPane.rowIndex="1" />
 
-                <TextField fx:id="txtPrecio"
-                           promptText="0.00"
-                           GridPane.rowIndex="3"
-                           GridPane.columnIndex="1"/>
+                    <Label styleClass="label-form" text="Categoría" GridPane.columnIndex="2" GridPane.rowIndex="0" />
 
-                <Label text="Stock:"
-                       GridPane.rowIndex="4"
-                       GridPane.columnIndex="0"/>
+                    <ComboBox fx:id="cbCategoria" prefHeight="26.0" prefWidth="275.0" GridPane.columnIndex="3" GridPane.rowIndex="0" />
 
-                <TextField fx:id="txtStock"
-                           promptText="0"
-                           GridPane.rowIndex="4"
-                           GridPane.columnIndex="1"/>
+                    <Label styleClass="label-form" text="Precio" GridPane.columnIndex="2" GridPane.rowIndex="1" />
 
-                <Label text="Estado:"
-                       GridPane.rowIndex="5"
-                       GridPane.columnIndex="0"/>
+                    <TextField fx:id="txtPrecio" prefHeight="26.0" prefWidth="268.0" GridPane.columnIndex="3" GridPane.rowIndex="1" />
 
-                <ComboBox fx:id="cbEstado"
-                          promptText="Seleccione"
-                          GridPane.rowIndex="5"
-                          GridPane.columnIndex="1"/>
+                    <Label styleClass="label-form" text="Stock" GridPane.columnIndex="0" GridPane.rowIndex="2" />
 
-            </GridPane>
+                    <TextField fx:id="txtStock" GridPane.columnIndex="1" GridPane.rowIndex="2" />
 
-            <HBox spacing="10">
+                    <Label styleClass="label-form" text="Estado" GridPane.columnIndex="2" GridPane.rowIndex="2" />
 
-                <Button text="Nuevo"
-                        onAction="#nuevo"/>
+                    <ComboBox fx:id="cbEstado" prefHeight="26.0" prefWidth="274.0" GridPane.columnIndex="3" GridPane.rowIndex="2" />
+               <columnConstraints>
+                  <ColumnConstraints />
+                  <ColumnConstraints maxWidth="311.0" minWidth="265.0" prefWidth="265.0" />
+                  <ColumnConstraints maxWidth="102.19999999999999" minWidth="56.19999999999999" prefWidth="102.19999999999999" />
+                  <ColumnConstraints />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints />
+                  <RowConstraints />
+                  <RowConstraints />
+               </rowConstraints>
 
-                <Button text="Guardar"
-                        onAction="#guardar"/>
+                </GridPane>
 
-                <Button text="Actualizar"
-                        onAction="#actualizar"/>
+                <HBox spacing="10">
 
-                <Button text="Eliminar"
-                        onAction="#eliminar"/>
+                    <Button onAction="#nuevo" prefHeight="26.0" prefWidth="100.0" styleClass="btn-nuevo" text="Nuevo" />
 
-                <Button text="Limpiar"
-                        onAction="#limpiar"/>
+                    <Button onAction="#guardar" prefHeight="26.0" prefWidth="100.0" styleClass="btn-guardar" text="Guardar" />
 
-            </HBox>
+                    <Button onAction="#actualizar" prefHeight="26.0" prefWidth="100.0" styleClass="btn-actualizar" text="Actualizar" />
 
-            <TableView fx:id="tablaProductos"
-                       prefHeight="350">
+                    <Button onAction="#eliminar" prefHeight="26.0" prefWidth="100.0" styleClass="btn-eliminar" text="Eliminar" />
 
-                <columns>
+                    <Button onAction="#limpiar" prefHeight="26.0" prefWidth="100.0" styleClass="btn-limpiar" text="Limpiar" />
 
-                    <TableColumn fx:id="colCodigo"
-                                 text="Código"
-                                 prefWidth="100"/>
+                </HBox>
 
-                    <TableColumn fx:id="colNombre"
-                                 text="Nombre"
-                                 prefWidth="180"/>
+            </VBox>
 
-                    <TableColumn fx:id="colCategoria"
-                                 text="Categoría"
-                                 prefWidth="150"/>
+            <!-- TABLA -->
 
-                    <TableColumn fx:id="colPrecio"
-                                 text="Precio"
-                                 prefWidth="100"/>
+            <VBox styleClass="card">
 
-                    <TableColumn fx:id="colStock"
-                                 text="Stock"
-                                 prefWidth="100"/>
+                <Label styleClass="card-title" text="Listado de Productos" />
 
-                    <TableColumn fx:id="colEstado"
-                                 text="Estado"
-                                 prefWidth="120"/>
+                <TableView fx:id="tablaProductos" prefHeight="350">
 
-                </columns>
+                    <columns>
 
-            </TableView>
+                        <TableColumn fx:id="colCodigo" prefWidth="100" text="Código" />
+
+                        <TableColumn fx:id="colNombre" prefWidth="180" text="Nombre" />
+
+                        <TableColumn fx:id="colCategoria" prefWidth="150" text="Categoría" />
+
+                        <TableColumn fx:id="colPrecio" prefWidth="100" text="Precio" />
+
+                        <TableColumn fx:id="colStock" prefWidth="100" text="Stock" />
+
+                        <TableColumn fx:id="colEstado" prefWidth="120" text="Estado" />
+
+                    </columns>
+
+                </TableView>
+
+            </VBox>
 
         </VBox>
 

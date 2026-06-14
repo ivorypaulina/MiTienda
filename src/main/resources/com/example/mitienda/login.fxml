@@ -10,23 +10,21 @@
 
     <VBox alignment="CENTER"
           spacing="15"
-          maxWidth="350"
-          style="-fx-background-color:white;
-                 -fx-background-radius:15;
-                 -fx-padding:30;">
+          maxWidth="380"
+          styleClass="login-card">
 
         <padding>
-            <Insets top="20"
-                    right="20"
-                    bottom="20"
-                    left="20"/>
+            <Insets top="25"
+                    right="25"
+                    bottom="25"
+                    left="25"/>
         </padding>
 
         <Label text="MITIENDA"
-               style="-fx-font-size:28px;
-                      -fx-font-weight:bold;"/>
+               styleClass="login-title"/>
 
-        <Label text="Inicio de Sesión"/>
+        <Label text="Sistema de Gestión de Inventario"
+               styleClass="login-subtitle"/>
 
         <TextField fx:id="txtUsuario"
                    promptText="Usuario"/>
@@ -39,6 +37,7 @@
 
         <Button text="Ingresar"
                 prefWidth="250"
+                styleClass="login-button"
                 onAction="#ingresar"/>
 
     </VBox>

@@ -1,0 +1,359 @@
+/* ==================================================
+   GENERAL
+================================================== */
+
+.root{
+    -fx-font-family: "Segoe UI";
+    -fx-background-color: #f4f6f9;
+}
+
+/* ==================================================
+   LOGIN
+================================================== */
+
+.stack-pane{
+    -fx-background-color: linear-gradient(
+            to bottom right,
+            #0f2748,
+            #2d6cdf
+    );
+}
+
+.login-card{
+
+    -fx-background-color: white;
+
+    -fx-background-radius: 15;
+
+    -fx-padding: 35;
+
+    -fx-spacing: 15;
+
+    -fx-effect: dropshadow(
+            gaussian,
+            rgba(0,0,0,0.25),
+            15,
+            0,
+            0,
+            4
+    );
+}
+
+.login-title{
+
+    -fx-font-size: 30px;
+
+    -fx-font-weight: bold;
+
+    -fx-text-fill: #0f2748;
+}
+
+.login-subtitle{
+
+    -fx-font-size: 14px;
+
+    -fx-text-fill: #7f8c8d;
+}
+
+.login-button{
+
+    -fx-background-color: #2d6cdf;
+
+    -fx-text-fill: white;
+
+    -fx-font-weight: bold;
+
+    -fx-background-radius: 6;
+
+    -fx-pref-height: 40;
+}
+
+.login-button:hover{
+
+    -fx-background-color: #1d4ed8;
+}
+
+/* ==================================================
+   MENU LATERAL
+================================================== */
+
+.menu{
+
+    -fx-background-color: linear-gradient(
+            to bottom,
+            #0d1b2a,
+            #1b263b
+    );
+
+    -fx-padding: 20;
+
+    -fx-spacing: 10;
+}
+
+.menu-title{
+
+    -fx-text-fill: white;
+
+    -fx-font-size: 24px;
+
+    -fx-font-weight: bold;
+}
+
+.menu-subtitle{
+
+    -fx-text-fill: #d1d5db;
+
+    -fx-font-size: 12px;
+}
+
+.menu .button{
+
+    -fx-background-color: transparent;
+
+    -fx-text-fill: white;
+
+    -fx-font-size: 14px;
+
+    -fx-alignment: CENTER_LEFT;
+
+    -fx-pref-height: 40;
+
+    -fx-background-radius: 8;
+}
+
+.menu .button:hover{
+
+    -fx-background-color: #2563eb;
+}
+
+.menu-active{
+
+    -fx-background-color: #2563eb;
+}
+
+/* ==================================================
+   CONTENIDO
+================================================== */
+
+.content{
+
+    -fx-padding: 20;
+
+    -fx-background-color: #f4f6f9;
+}
+
+.page-title{
+
+    -fx-font-size: 26px;
+
+    -fx-font-weight: bold;
+
+    -fx-text-fill: #1f2937;
+}
+
+.subtitulo{
+
+    -fx-font-size: 14px;
+
+    -fx-text-fill: #6b7280;
+}
+
+/* ==================================================
+   TARJETAS
+================================================== */
+
+.card{
+
+    -fx-background-color: white;
+
+    -fx-background-radius: 12;
+
+    -fx-padding: 20;
+
+    -fx-effect: dropshadow(
+            gaussian,
+            rgba(0,0,0,0.10),
+            12,
+            0,
+            0,
+            2
+    );
+}
+
+.card-title{
+
+    -fx-font-size: 16px;
+
+    -fx-font-weight: bold;
+
+    -fx-text-fill: #374151;
+}
+
+/* ==================================================
+   LABELS
+================================================== */
+
+.label-form{
+
+    -fx-font-weight: bold;
+
+    -fx-text-fill: #374151;
+}
+
+/* ==================================================
+   CAMPOS
+================================================== */
+
+.text-field,
+.password-field,
+.combo-box{
+
+    -fx-pref-height: 38;
+
+    -fx-background-color: white;
+
+    -fx-border-color: #d1d5db;
+
+    -fx-border-radius: 6;
+
+    -fx-background-radius: 6;
+}
+
+.text-field:focused,
+.password-field:focused,
+.combo-box:focused{
+
+    -fx-border-color: #2563eb;
+}
+
+/* ==================================================
+   BOTONES CRUD
+================================================== */
+
+.btn-nuevo{
+
+    -fx-background-color: #2563eb;
+
+    -fx-text-fill: white;
+}
+
+.btn-guardar{
+
+    -fx-background-color: #16a34a;
+
+    -fx-text-fill: white;
+}
+
+.btn-actualizar{
+
+    -fx-background-color: #f59e0b;
+
+    -fx-text-fill: white;
+}
+
+.btn-eliminar{
+
+    -fx-background-color: #dc2626;
+
+    -fx-text-fill: white;
+}
+
+.btn-limpiar{
+
+    -fx-background-color: #6b7280;
+
+    -fx-text-fill: white;
+}
+
+.btn-nuevo,
+.btn-guardar,
+.btn-actualizar,
+.btn-eliminar,
+.btn-limpiar{
+
+    -fx-font-weight: bold;
+
+    -fx-background-radius: 6;
+
+    -fx-pref-height: 38;
+
+    -fx-cursor: hand;
+}
+
+.btn-nuevo:hover{
+    -fx-opacity: 0.90;
+}
+
+.btn-guardar:hover{
+    -fx-opacity: 0.90;
+}
+
+.btn-actualizar:hover{
+    -fx-opacity: 0.90;
+}
+
+.btn-eliminar:hover{
+    -fx-opacity: 0.90;
+}
+
+.btn-limpiar:hover{
+    -fx-opacity: 0.90;
+}
+
+/* ==================================================
+   TABLA
+================================================== */
+
+.table-view{
+
+    -fx-background-color: white;
+
+    -fx-background-radius: 10;
+
+    -fx-border-radius: 10;
+
+    -fx-border-color: #e5e7eb;
+}
+
+.table-view .column-header{
+
+    -fx-background-color: #f3f4f6;
+}
+
+.table-view .column-header .label{
+
+    -fx-font-weight: bold;
+
+    -fx-text-fill: #374151;
+}
+
+.table-row-cell{
+
+    -fx-cell-size: 40;
+}
+
+.table-row-cell:hover{
+
+    -fx-background-color: #eff6ff;
+}
+
+.table-row-cell:selected{
+
+    -fx-background-color: #dbeafe;
+}
+
+/* ==================================================
+   SCROLLBAR
+================================================== */
+
+.scroll-bar:vertical{
+
+    -fx-background-color: transparent;
+}
+
+.scroll-bar .thumb{
+
+    -fx-background-color: #cbd5e1;
+
+    -fx-background-radius: 5;
+}
